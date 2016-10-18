@@ -1,0 +1,6 @@
+{
+    "name": "automation/users",
+    "description": "Pulling Users from Efront with branch Ids",
+    "minimum-stability": "dev",
+    "require": {}
+}
