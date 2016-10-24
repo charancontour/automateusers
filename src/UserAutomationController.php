@@ -31,7 +31,7 @@ public function branchusers($efront_branch_id)
 	if($branch_result->success){
 			foreach ($branch_result->data->users->list as $efront_user) {
 				$efront_user_role_id = $student_id;
-				if(intval($efront_user->user_types_ID) === 9){
+				if(intval($efront_user->user_types_ID) === 9 || intval($efront_user->user_types_ID) === 1){
 					$efront_user_role_id = $admin_id;
 				}
 				$user = User::create(['efront_user_id'=>$efront_user->id,
