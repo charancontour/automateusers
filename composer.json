@@ -1,6 +1,22 @@
 {
-    "name": "automation/users",
-    "description": "Pulling Users from Efront with branch Ids",
+    "name": "charancontour/automateusers",
+    "description": "messaging through the package",
+    "keywords": ["github", "laravel"],
+    "license": "contour",
+    "authors": [
+        {
+            "name": "charan",
+            "email": "charan@contourgroupinc.com"
+        }
+    ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+      "php": ">=5.4.0",
+      "illuminate/support": "5.0.*"
+    },
+    "autoload": {
+      "psr-4": {
+          "Automateusers\\": "src/"
+      }
+    }
 }

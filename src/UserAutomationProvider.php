@@ -1,4 +1,4 @@
-<?php namespace Automation\Users;
+<?php namespace Automateusers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -25,7 +25,7 @@ class UserAutomationProvider extends ServiceProvider {
 	public function register()
 	{
 		include __DIR__.'/routes.php';
-        $this->app->make('Automation\Users\UserAutomationController');
+        $this->app->make('Automateusers\UserAutomationController');
 	}
 
 }

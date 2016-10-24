@@ -1,3 +1,6 @@
-<?php 
-Route::get('automate-users/{id}','automation\users\userAutomationController@branchusers');
-Route::get('automate-users-insert','automation\users\userAutomationController@prefixLogin');
+<?php
+Route::get('automate-users/{id}','Automateusers\userAutomationController@branchusers');
+Route::get('automate-users-insert','Automateusers\userAutomationController@prefixLogin');
+Route::get('testautomation',function(){
+  return "HEro";
+});

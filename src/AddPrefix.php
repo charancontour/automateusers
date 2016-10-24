@@ -1,4 +1,4 @@
-<?php namespace Automation\Users;
+<?php namespace Automateusers;
 
 use App\Commands\Command;
 
