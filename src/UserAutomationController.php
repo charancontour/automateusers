@@ -54,16 +54,18 @@ public function branchusers($efront_branch_id)
 		return "efront error, check efront DB wether efront id is present";
 	}
 	return "All Good";
-}
+ }
 
-public function prefixLogin()
-{
-$prefix = \Config::get("efront.LoginPrefix");
-$users = User::where('login','not like',"$prefix%")
-                ->where('user_status_id',1)
-                ->get();
-foreach($users as $user){
-  Queue::push(new AddPrefix($user->id));
-}
-}
+	public function prefixLogin()
+	{
+		$prefix = \Config::get("efront.LoginPrefix");
+		$users = User::where('login','not like',"$prefix%")
+		                ->where('user_status_id',1)
+		                ->get();
+		foreach($users as $user){
+			if(is_int($user->login)){
+				Queue::push(new AddPrefix($user->id));				
+			}
+		}
+	}
 }
